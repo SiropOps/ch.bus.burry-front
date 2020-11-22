@@ -10,7 +10,9 @@ import { Observable, throwError } from 'rxjs';
 import { retry, catchError, finalize } from 'rxjs/operators';
 import { ToastrService } from 'ngx-toastr';
 import { NgxSpinnerService } from 'ngx-spinner';
+import { Injectable } from "@angular/core";
 
+@Injectable()
 export class HttpErrorInterceptor implements HttpInterceptor {
 
     count = 0;
