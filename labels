@@ -1,0 +1,8 @@
+traefik.http.middlewares.burry.headers.accessControlAllowMethods=GET,OPTIONS,PUT
+traefik.http.middlewares.burry.headers.accessControlAllowOrigin=*
+traefik.http.middlewares.burry.headers.accessControlMaxAge=100
+traefik.http.middlewares.burry.headers.addVaryHeader=true
+traefik.http.middlewares.burry.headers.isDevelopment=true
+traefik.http.routers.burry.rule=Host(`raspburrypi4`)
+traefik.http.services.burry.loadbalancer.server.port=80
+traefik.http.routers.burry.middlewares=burry@docker
