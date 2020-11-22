@@ -144,5 +144,8 @@
       }
     }
   },
-  "defaultProject": "burry-front"
+  "defaultProject": "burry-front",
+  "cli": {
+    "analytics": "61e73fde-0727-4689-896f-77c4986f452f"
+  }
 }
