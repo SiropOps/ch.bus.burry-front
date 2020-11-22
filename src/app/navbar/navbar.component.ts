@@ -1,6 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Observable, Subscription, timer } from 'rxjs';
-import { SystemService } from '../service/system.service';
+// import { SystemService } from '../service/system.service';
 
 @Component({
     selector: 'app-navbar',
@@ -9,28 +9,28 @@ import { SystemService } from '../service/system.service';
 })
 export class NavbarComponent implements OnInit, OnDestroy {
     source$: Observable<number> = timer(0, 1000);
-    private subscription: Subscription;
+    // private subscription: Subscription;
     navbarOpen = false;
-    private isUp = false;
+    public isUp = true;
 
     toggleNavbar() {
         this.navbarOpen = !this.navbarOpen;
     }
 
-    constructor(private systemService: SystemService) { }
+    constructor(/*private systemService: SystemService*/) { }
 
     ngOnInit() {
-        this.subscription = this.source$.subscribe(() => this.systemService.get().subscribe((res) => {
-            this.isUp = res.up;
-            if (this.isUp) {
-                this.subscription.unsubscribe();
-            }
+        // this.subscription = this.source$.subscribe(() => this.systemService.get().subscribe((res) => {
+        //     this.isUp = res.up;
+        //     if (this.isUp) {
+        //         this.subscription.unsubscribe();
+        //     }
 
-        }));
+        // }));
     }
 
     ngOnDestroy() {
-        this.subscription.unsubscribe();
+        // this.subscription.unsubscribe();
     }
 
 }

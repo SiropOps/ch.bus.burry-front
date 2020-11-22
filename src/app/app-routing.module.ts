@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { RoadComponent } from './road/road.component';
 import { TripeComponent } from './tripe/tripe.component';
 import { CommandComponent } from './command/command.component';
+import { GaugeComponent } from './gauge/gauge.component';
 
 const routes: Routes = [{
     path: 'road',
@@ -11,8 +12,11 @@ const routes: Routes = [{
     path: 'tripe',
     component: TripeComponent
 }, {
+    path: 'gauge',
+    component: GaugeComponent
+}, {
     path: 'command',
-        component: CommandComponent
+    component: CommandComponent
 }, {
     path: '',
     redirectTo: 'road',

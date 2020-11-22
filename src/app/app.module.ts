@@ -16,6 +16,7 @@ import { TripeComponent } from './tripe/tripe.component';
 import { CommandComponent } from './command/command.component';
 
 import { NgxSpinnerModule } from 'ngx-spinner';
+import { GaugeComponent } from './gauge/gauge.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { NgxSpinnerModule } from 'ngx-spinner';
     RoadComponent,
     NavbarComponent,
     TripeComponent,
-    CommandComponent
+    CommandComponent,
+    GaugeComponent
   ],
   imports: [
     NgbModule,

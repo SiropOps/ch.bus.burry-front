@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { GpsService } from '../service/gps.service';
 
-declare let L;
+declare let L: any;
 
 @Component({
   selector: 'app-tripe',
@@ -13,7 +13,7 @@ export class TripeComponent implements OnInit {
   constructor(private gpsService: GpsService) { }
 
   ngOnInit() {
-    const map = L.map('map').setView([46.237206667, 6.082325], 7);
+    const map = L.map('tripe').setView([46.237206667, 6.082325], 7);
 
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '@<a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'

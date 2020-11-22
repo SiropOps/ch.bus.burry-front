@@ -3,7 +3,7 @@ import { GpsService } from '../service/gps.service';
 import { Observable, timer, Subscription } from 'rxjs';
 
 
-declare let L;
+declare let L: any;
 
 @Component({
   selector: 'app-road',
@@ -13,6 +13,7 @@ declare let L;
 export class RoadComponent implements OnInit, OnDestroy {
   source$: Observable<number> = timer(0, 1000);
   private subscription: Subscription;
+
 
   constructor(private gpsService: GpsService) { }
 
