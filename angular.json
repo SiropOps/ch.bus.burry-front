@@ -13,6 +13,12 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "allowedCommonJsDependencies": [
+              "core-js",
+              "raf",
+              "xlsx",
+              "@babel/runtime"
+            ],
             "aot": true,
             "outputPath": "dist/burry-front",
             "index": "src/index.html",
