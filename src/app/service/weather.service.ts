@@ -21,4 +21,8 @@ export class WeatherService {
     return this.httpClient.get<Weather[]>(`${this.apiURL}/insides`).pipe(take(1));
   }
 
+  public getMonlesis(): Observable<Weather[]> {
+    return this.httpClient.get<Weather[]>(`${this.apiURL}/monlesis`).pipe(take(1));
+  }
+
 }

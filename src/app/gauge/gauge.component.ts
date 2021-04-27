@@ -14,6 +14,7 @@ export class GaugeComponent implements AfterViewInit, OnDestroy, OnInit {
 
   private outsidesData = [];
   private insidesData = [];
+  private monlesisData = [];
   private chart: am4charts.XYChart;
 
   constructor(@Inject(PLATFORM_ID) private platformId: any, private zone: NgZone, private weatherService: WeatherService) { }
@@ -75,6 +76,13 @@ export class GaugeComponent implements AfterViewInit, OnDestroy, OnInit {
         this.insidesData.push({ date: new Date(item.time), value: item.temperature });
       });
       this.refreshData('chartinsidesdiv', this.insidesData);
+    });
+
+    this.weatherService.getMonlesis().subscribe(list => {
+      list.forEach((item) => {
+        this.monlesisData.push({ date: new Date(item.time), value: item.temperature });
+      });
+      this.refreshData('chartmonlesisdiv', this.insidesData);
     });
   }
 
