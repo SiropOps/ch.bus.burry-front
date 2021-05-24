@@ -82,7 +82,7 @@ export class GaugeComponent implements AfterViewInit, OnDestroy, OnInit {
       list.forEach((item) => {
         this.monlesisData.push({ date: new Date(item.time), value: item.temperature });
       });
-      this.refreshData('chartmonlesisdiv', this.insidesData);
+      this.refreshData('chartmonlesisdiv', this.monlesisData);
     });
   }
 
