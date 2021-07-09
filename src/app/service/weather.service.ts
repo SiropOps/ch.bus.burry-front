@@ -8,7 +8,7 @@ import { take } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class WeatherService {
-  apiURL = 'http://192.168.8.200/api/weather';
+  apiURL = 'http://192.168.8.200:8012/api/weather';
 
   constructor(private httpClient: HttpClient) { }
 
