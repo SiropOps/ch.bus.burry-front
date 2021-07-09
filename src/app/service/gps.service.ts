@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class GpsService {
-  apiURL = 'http://192.168.8.200:8011/api/gps';
+  apiURL = 'http://192.168.8.210:8011/api/gps';
 
   constructor(private httpClient: HttpClient) { }
 
