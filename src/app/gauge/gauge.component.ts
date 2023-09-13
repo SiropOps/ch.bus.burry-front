@@ -99,3 +99,4 @@ export class GaugeComponent implements AfterViewInit, OnDestroy, OnInit {
     });
   }
 }
+

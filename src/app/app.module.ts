@@ -47,3 +47,4 @@ import { GaugeComponent } from './gauge/gauge.component';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
